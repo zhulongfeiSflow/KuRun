@@ -326,7 +326,7 @@
       "__id__": 6
     },
     "_enabled": true,
-    "jumpHeight": 220,
+    "jumpHeight": 100,
     "jumpDuration": 0.5,
     "state": "run"
   },
