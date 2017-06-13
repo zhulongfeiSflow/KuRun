@@ -1,0 +1,24 @@
+{
+  "appKey": "",
+  "appSecret": "",
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSdk": [
+    "anysdk"
+  ],
+  "inlineSpriteFrames": true,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.KuRun",
+  "privateKey": "",
+  "renderMode": "0",
+  "startScene": "9e0d4ecb-b287-45f3-870b-60cec0462f29",
+  "title": "KuRun",
+  "webOrientation": "auto"
+}

@@ -1,9 +1,9 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "bomb_high",
+  "_name": "bomb_low",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.9833333333333333,
+  "_duration": 1,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -13,15 +13,15 @@
         {
           "frame": 0,
           "value": [
-            649,
-            -20
+            900,
+            -110
           ]
         },
         {
-          "frame": 0.9833333333333333,
+          "frame": 1,
           "value": [
-            -562,
-            -20
+            -724,
+            -110
           ]
         }
       ]
@@ -30,42 +30,37 @@
   "events": [
     {
       "frame": 0.65,
-      "func": "judgeDown",
+      "func": "judgeJump",
       "params": []
     },
     {
       "frame": 0.6666666666666666,
-      "func": "judgeDown",
+      "func": "judgeJump",
       "params": []
     },
     {
       "frame": 0.6833333333333333,
-      "func": "judgeDown",
+      "func": "judgeJump",
       "params": []
     },
     {
       "frame": 0.7,
-      "func": "judgeDown",
+      "func": "judgeJump",
       "params": []
     },
     {
       "frame": 0.7166666666666667,
-      "func": "judgeDown",
+      "func": "judgeJump",
       "params": []
     },
     {
       "frame": 0.7333333333333333,
-      "func": "judgeDown",
+      "func": "judgeJump",
       "params": []
     },
     {
       "frame": 0.75,
-      "func": "judgeDown",
-      "params": []
-    },
-    {
-      "frame": 0.7666666666666667,
-      "func": "judgeDown",
+      "func": "judgeJump",
       "params": []
     }
   ]

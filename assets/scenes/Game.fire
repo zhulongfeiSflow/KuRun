@@ -59,20 +59,20 @@
         "__id__": 3
       },
       {
-        "__id__": 6
+        "__id__": 7
       },
       {
-        "__id__": 10
+        "__id__": 11
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 14
+        "__id__": 15
       },
       {
-        "__id__": 15
+        "__id__": 16
       }
     ],
     "_prefab": null,
@@ -128,6 +128,9 @@
       },
       {
         "__id__": 5
+      },
+      {
+        "__id__": 6
       }
     ],
     "_prefab": null,
@@ -212,6 +215,21 @@
     "playOnLoad": true
   },
   {
+    "__type__": "4cc3dJ56oJNpan9wjdlTamU",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "player": {
+      "__id__": 7
+    },
+    "peachPrefab": {
+      "__uuid__": "c0d23a92-a4d7-497c-848a-dca49a5ab71a"
+    }
+  },
+  {
     "__type__": "cc.Node",
     "_name": "Player",
     "_objFlags": 0,
@@ -223,13 +241,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 7
-      },
-      {
         "__id__": 8
       },
       {
         "__id__": 9
+      },
+      {
+        "__id__": 10
       }
     ],
     "_prefab": null,
@@ -260,7 +278,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -243,
-      "y": -143
+      "y": -147
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -274,7 +292,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 7
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -302,7 +320,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 7
     },
     "_enabled": true,
     "_defaultClip": {
@@ -323,12 +341,15 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 7
     },
     "_enabled": true,
     "jumpHeight": 100,
     "jumpDuration": 0.5,
-    "state": "run"
+    "state": "run",
+    "jumpAudio": {
+      "__uuid__": "dc194f1a-c8a5-46ca-aaf9-f03b70974af5"
+    }
   },
   {
     "__type__": "cc.Node",
@@ -342,13 +363,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 11
-      },
-      {
         "__id__": 12
       },
       {
         "__id__": 13
+      },
+      {
+        "__id__": 14
       }
     ],
     "_prefab": null,
@@ -393,7 +414,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 10
+      "__id__": 11
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -419,11 +440,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 10
+      "__id__": 11
     },
     "_enabled": true,
     "player": {
-      "__id__": 6
+      "__id__": 7
     },
     "bg": {
       "__id__": 3
@@ -434,7 +455,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 10
+      "__id__": 11
     },
     "_enabled": true,
     "_defaultClip": null,
@@ -473,7 +494,7 @@
     },
     "_enabled": true,
     "player": {
-      "__id__": 6
+      "__id__": 7
     }
   }
 ]

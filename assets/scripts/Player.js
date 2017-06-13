@@ -2,11 +2,17 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-         jumpHeight: 0,
 
-         jumpDuration: 0,
+        jumpHeight: 0,
 
-         state: 'run',
+        jumpDuration: 0,
+
+        state: 'run',
+
+        jumpAudio:{
+            default: null,
+            url: cc.AudioClip,
+        }
     },
 
     // use this for initialization
@@ -32,6 +38,8 @@ cc.Class({
             cc.callFunc(function(){
                 this.run();
             }, this)));
+            
+            cc.audioEngine.playEffect(this.jumpAudio, false);
         }
     },
 
@@ -51,6 +59,7 @@ cc.Class({
         }
     },
 
+    //帧时间调用
     gameOver: function(){
         cc.director.loadScene('Game');
     },
