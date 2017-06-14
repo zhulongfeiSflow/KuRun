@@ -11,8 +11,6 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
 
-        this.score = 0;
-
         var self = this;
         this.node.on('touchstart', function(event){
             var visibleSize = cc.director.getVisibleSize();

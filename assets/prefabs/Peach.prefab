@@ -100,7 +100,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "pickRadius": 50,
+    "pickRadius": 100,
     "scoreAudio": {
       "__uuid__": "da6268c6-e316-4028-87d4-5a4e1b262709"
     }

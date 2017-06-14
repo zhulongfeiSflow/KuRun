@@ -9,8 +9,8 @@
       true
     ]
   ],
-  "design-resolution-height": 480,
-  "design-resolution-width": 800,
+  "design-resolution-height": 720,
+  "design-resolution-width": 1280,
   "excluded-modules": [],
   "fit-height": true,
   "fit-width": true,
@@ -20,8 +20,8 @@
   ],
   "simulator-orientation": false,
   "simulator-resolution": {
-    "height": 640,
-    "width": 960
+    "height": 480,
+    "width": 800
   },
   "start-scene": "current",
   "use-customize-simulator": false,

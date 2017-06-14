@@ -3,7 +3,7 @@
   "_name": "bomb_low",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 1,
+  "_duration": 2,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -13,14 +13,14 @@
         {
           "frame": 0,
           "value": [
-            900,
+            697,
             -110
           ]
         },
         {
-          "frame": 1,
+          "frame": 2,
           "value": [
-            -724,
+            -696,
             -110
           ]
         }
@@ -29,37 +29,7 @@
   },
   "events": [
     {
-      "frame": 0.65,
-      "func": "judgeJump",
-      "params": []
-    },
-    {
-      "frame": 0.6666666666666666,
-      "func": "judgeJump",
-      "params": []
-    },
-    {
-      "frame": 0.6833333333333333,
-      "func": "judgeJump",
-      "params": []
-    },
-    {
-      "frame": 0.7,
-      "func": "judgeJump",
-      "params": []
-    },
-    {
-      "frame": 0.7166666666666667,
-      "func": "judgeJump",
-      "params": []
-    },
-    {
-      "frame": 0.7333333333333333,
-      "func": "judgeJump",
-      "params": []
-    },
-    {
-      "frame": 0.75,
+      "frame": 1.2166666666666666,
       "func": "judgeJump",
       "params": []
     }

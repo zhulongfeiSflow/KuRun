@@ -12,12 +12,18 @@ cc.Class({
         jumpAudio:{
             default: null,
             url: cc.AudioClip,
-        }
+        },
+
+        scoreDisplay: {
+            default: null,
+            type: cc.Label
+        },
     },
 
     // use this for initialization
     onLoad: function () {
 
+        this.score = 0;
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -62,5 +68,14 @@ cc.Class({
     //帧时间调用
     gameOver: function(){
         cc.director.loadScene('Game');
+    },
+
+    //增加得分
+    gainScore: function(){
+
+      this.score++;
+      
+      this.scoreDisplay.string = 'Score:' + this.score.toString();
+        
     },
 });

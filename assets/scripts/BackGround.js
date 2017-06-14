@@ -17,6 +17,8 @@ cc.Class({
             type: cc.Node
         },
 
+        
+
         peachPrefab:{
             default:null,
             type: cc.Prefab
@@ -25,7 +27,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.instantiatePeach();
+        // this.instantiatePeach();
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -46,10 +48,14 @@ cc.Class({
         newPeach.getComponent('Peach').player = this.player;
     },
 
-    //批量生成桃子
+    //背景动画开始前调用批量生成桃子
     instantiatePeach:function(){
+        this.node.removeAllChildren();
         for(var i = -2000; i <= 1100; i+=150){
-            this.spawnNewPeach( cc.p(i,-25) );
+
+            var randY=cc.random0To1()*100;
+
+            this.spawnNewPeach( cc.p(i,-25 + randY) );
         }
     }
 });

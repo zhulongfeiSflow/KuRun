@@ -3,7 +3,7 @@
   "_name": "bomb_high",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.9833333333333333,
+  "_duration": 1.9666666666666666,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -13,15 +13,15 @@
         {
           "frame": 0,
           "value": [
-            858,
-            -20
+            691,
+            -25
           ]
         },
         {
-          "frame": 0.9833333333333333,
+          "frame": 1.9666666666666666,
           "value": [
             -688,
-            -20
+            -25
           ]
         }
       ]
@@ -29,37 +29,7 @@
   },
   "events": [
     {
-      "frame": 0.6333333333333333,
-      "func": "judgeDown",
-      "params": []
-    },
-    {
-      "frame": 0.65,
-      "func": "judgeDown",
-      "params": []
-    },
-    {
-      "frame": 0.6666666666666666,
-      "func": "judgeDown",
-      "params": []
-    },
-    {
-      "frame": 0.6833333333333333,
-      "func": "judgeDown",
-      "params": []
-    },
-    {
-      "frame": 0.7,
-      "func": "judgeDown",
-      "params": []
-    },
-    {
-      "frame": 0.7166666666666667,
-      "func": "judgeDown",
-      "params": []
-    },
-    {
-      "frame": 0.7333333333333333,
+      "frame": 1.2166666666666666,
       "func": "judgeDown",
       "params": []
     }
