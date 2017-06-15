@@ -13,12 +13,7 @@ cc.Class({
         // },
         // ...
 
-        pickRadius:0,
-
-        scoreAudio:{
-            default: null,
-            url: cc.AudioClip,
-        }
+        pickRadius:0
     },
 
     //获取悟空与桃子的距离
@@ -34,7 +29,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        
+        this.audioManager = cc.director.getScene().getChildByName('AudioManager').getComponent('AudioManager');
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -48,7 +43,8 @@ cc.Class({
 
     onPiacked: function(){
         // 播放吃桃子音效
-        cc.audioEngine.playEffect(this.scoreAudio, false);
+        this.audioManager.playAudio('score');
+                
         this.player.getComponent('Player').gainScore();
         this.node.destroy();
     }

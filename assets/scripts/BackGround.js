@@ -15,14 +15,27 @@ cc.Class({
         player: {
             default:null,
             type: cc.Node
-        },
-
-        
+        },        
 
         peachPrefab:{
             default:null,
             type: cc.Prefab
-        }
+        },        
+
+        pitfallPrefab:{
+            default:null,
+            type: cc.Prefab
+        },
+
+        barrelPrefab:{
+            default:null,
+            type: cc.Prefab
+        },
+
+        audioManager:{
+            default: null,
+            type: cc.Node,
+        },
     },
 
     // use this for initialization
@@ -35,27 +48,38 @@ cc.Class({
 
     // },
 
+    //实例化一个预制体
+    initPrefab: function(prefab, position, script){
+        var newPrefab = cc.instantiate(prefab);
 
-    //初始化一个桃子精灵
-    spawnNewPeach: function(peachPosition){
+        this.node.addChild(newPrefab);
 
-        var newPeach = cc.instantiate(this.peachPrefab);
-
-        this.node.addChild(newPeach);
-
-        newPeach.setPosition( peachPosition );
-
-        newPeach.getComponent('Peach').player = this.player;
+        newPrefab.setPosition(position);
+        newPrefab.getComponent(script).player = this.player;       
     },
 
-    //背景动画开始前调用批量生成桃子
+    //背景动画开始前调用批量生成预制体
     instantiatePeach:function(){
         this.node.removeAllChildren();
+        //布置桃子
         for(var i = -2000; i <= 1100; i+=150){
 
             var randY=cc.random0To1()*100;
 
-            this.spawnNewPeach( cc.p(i,-25 + randY) );
+            this.initPrefab( this.peachPrefab, cc.p(i,-25 + randY), 'Peach' );
         }
+        //布置陷阱障碍物和水桶
+        for(var i = -1500; i <= 1100; i+=1000){
+            var randX=cc.random0To1()*500;
+
+            if(cc.randomMinus1To1() > 0){
+                this.initPrefab( this.pitfallPrefab, cc.p(i - randX,-233), 'Pitfall' );
+            } else {
+                this.initPrefab( this.barrelPrefab, cc.p(i - randX,-100), 'Barrel' );
+
+            }
+            
+        }
+
     }
 });

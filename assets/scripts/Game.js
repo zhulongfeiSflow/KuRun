@@ -5,7 +5,7 @@ cc.Class({
         player:{
             default:null,
             type: cc.Node,
-        }
+        },
     },
 
     // use this for initialization
@@ -22,9 +22,12 @@ cc.Class({
         });
 
         this.node.on('touchend', function(event){
+            
+            self.player.getComponent('Player').downRelease();
+
             var visibleSize = cc.director.getVisibleSize();
             if(event.getLocationX()<visibleSize.width/2){
-                self.player.getComponent('Player').downRelease();
+                // self.player.getComponent('Player').downRelease();
             }else{
                 //self.player.getComponent('Player').jump();
             }

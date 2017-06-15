@@ -5,27 +5,20 @@ cc.Class({
         player:{
             default: null,
             type:cc.Node,
-        },
-        
-        bg:{
-            default: null,
-            type:cc.Node,
         }
     },
 
+    //高层导弹帧事件
     judgeDown:function(){
-        if(this.player.getComponent('Player').state == 'down'){
-            console.log("down--------------");
-        }else{
-            this.hit();
+        if(this.player.getComponent('Player').canbeHitByHighBomb() ){
+            this.bombHit();
         }
     },
 
+    //底层导弹帧事件    
     judgeJump:function(){
-        if(this.player.getComponent('Player').state == 'jump'){
-            console.log("jump--------------");
-        }else{
-            this.hit();
+        if( this.player.getComponent('Player').isOnLand() ){
+            this.bombHit();
         }
     },
 
@@ -37,14 +30,11 @@ cc.Class({
         }
     },
 
-    hit:function(){
-        this.player.stopAllActions();
-        this.player.getComponent('Player').state='died';
-        this.player.getComponent(cc.Animation).stop();
-        this.player.getComponent(cc.Animation).play('player_hit');
-        this.bg.getComponent(cc.Animation).stop();        
+    bombHit:function(){
         this.getComponent(cc.Animation).stop();
         this.unschedule(this.spwanBomb);
+
+        this.player.getComponent('Player').died('bomb');   
     },
 
     // use this for initialization

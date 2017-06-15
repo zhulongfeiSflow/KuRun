@@ -75,16 +75,19 @@
       },
       {
         "__id__": 23
+      },
+      {
+        "__id__": 44
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 44
+        "__id__": 48
       },
       {
-        "__id__": 45
+        "__id__": 49
       }
     ],
     "_prefab": null,
@@ -126,7 +129,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Bg_game_long",
+    "_name": "BakGround",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -239,7 +242,14 @@
     },
     "peachPrefab": {
       "__uuid__": "c0d23a92-a4d7-497c-848a-dca49a5ab71a"
-    }
+    },
+    "pitfallPrefab": {
+      "__uuid__": "3f77b04a-4457-4ebb-ae75-594f1df5d644"
+    },
+    "barrelPrefab": {
+      "__uuid__": "87eacf5d-aa2d-4c7b-b5f8-1874afe8efb3"
+    },
+    "audioManager": null
   },
   {
     "__type__": "cc.Node",
@@ -276,7 +286,7 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0
+      "y": 0.5
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -290,7 +300,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -243,
-      "y": -160
+      "y": -96
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -344,6 +354,12 @@
       },
       {
         "__uuid__": "855db37b-8bc3-4f61-9f63-b2fe8fa35fef"
+      },
+      {
+        "__uuid__": "149644af-d92c-4c5d-9497-fa00ca86aa95"
+      },
+      {
+        "__uuid__": "6a708ae4-0888-4bf5-bbef-c8ded520693d"
       }
     ],
     "playOnLoad": true
@@ -359,11 +375,12 @@
     "jumpHeight": 100,
     "jumpDuration": 0.5,
     "state": "run",
-    "jumpAudio": {
-      "__uuid__": "dc194f1a-c8a5-46ca-aaf9-f03b70974af5"
-    },
+    "score": 0,
     "scoreDisplay": {
       "__id__": 11
+    },
+    "backGround": {
+      "__id__": 3
     }
   },
   {
@@ -536,9 +553,6 @@
     "_enabled": true,
     "player": {
       "__id__": 7
-    },
-    "bg": {
-      "__id__": 3
     }
   },
   {
@@ -774,6 +788,12 @@
     "_enabled": true,
     "btnLayout": {
       "__id__": 23
+    },
+    "player": {
+      "__id__": 7
+    },
+    "soundBtn": {
+      "__id__": 44
     }
   },
   {
@@ -1587,6 +1607,158 @@
     "_N$spacingY": 40,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Music_Button",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 45
+      },
+      {
+        "__id__": 46
+      }
+    ],
+    "_prefab": null,
+    "_id": "e4225PwFhBISKhI2fk2S/0L",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 50,
+      "height": 50
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 460,
+      "y": 290
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 44
+    },
+    "_enabled": true,
+    "_spriteFrame": {
+      "__uuid__": "7d8df4ba-23ea-45f8-b980-7b9b669491ac"
+    },
+    "_type": 1,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
+  },
+  {
+    "__type__": "cc.Button",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 44
+    },
+    "_enabled": true,
+    "transition": 1,
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 143,
+      "g": 128,
+      "b": 128,
+      "a": 255
+    },
+    "hoverColor": {
+      "__type__": "cc.Color",
+      "r": 133,
+      "g": 156,
+      "b": 73,
+      "a": 255
+    },
+    "duration": 0.1,
+    "zoomScale": 1.2,
+    "pressedSprite": {
+      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
+    },
+    "hoverSprite": {
+      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
+    },
+    "clickEvents": [
+      {
+        "__id__": 47
+      }
+    ],
+    "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$normalSprite": {
+      "__uuid__": "7d8df4ba-23ea-45f8-b980-7b9b669491ac"
+    },
+    "_N$disabledSprite": {
+      "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
+    },
+    "_N$target": {
+      "__id__": 44
+    }
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 21
+    },
+    "component": "Button_pause",
+    "handler": "onAndOffSound",
+    "customEventData": ""
   },
   {
     "__type__": "cc.Canvas",

@@ -15,7 +15,17 @@ cc.Class({
         btnLayout:{
             default:null,
             type: cc.Node,
-        }
+        },
+        
+        player:{
+            default:null,
+            type: cc.Node,
+        },
+        
+        soundBtn:{
+            default:null,
+            type: cc.Node,
+        },
     },
 
     onBtnClicked: function(){
@@ -44,10 +54,15 @@ cc.Class({
         cc.director.resume();
         cc.director.loadScene('Login');
     },
+    //打开或关闭声音
+    onAndOffSound: function(){
+        this.audioManager.turnOnOrOffSound();
+    },
 
     // use this for initialization
     onLoad: function () {
-
+        //获取音效管理脚本组件
+        this.audioManager = cc.director.getScene().getChildByName('AudioManager').getComponent('AudioManager');
     },
 
     // called every frame, uncomment this function to activate update callback
