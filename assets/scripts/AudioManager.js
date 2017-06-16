@@ -38,6 +38,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         cc.game.addPersistRootNode(this.node);
+        
         this.bg_prison = cc.audioEngine.play(this.pirsonAudio, true);
         cc.audioEngine.setVolume (this.bg_prison, 0.3);
         
