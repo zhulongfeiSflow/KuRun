@@ -18,8 +18,8 @@ cc.Class({
     onLoad: function () {
 
         this.node.on('touchend', function(event){
-            // cc.director.loadScene('Game');
-            cc.director.loadScene('Game_desert');
+            cc.director.loadScene('Game');
+            // cc.director.loadScene('Game_desert');
         });
     },
 
